@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('C:/Users/Lorenz Cassey Lausa/Desktop/Lorenz/19335268_6085949.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+
+    }
+
+    .lor {
+        width: 300px;
+        padding: 30px;
+        border-radius: 10%;
+        margin: 20px auto; 
+        margin-top: 150px;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 10px 10px 10px 2px black;
+        backdrop-filter: blur(5px);
+        text-align: center;
+        color: white;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+   
+   
+</style>
+</head>
+<body>
+
+<script>
+function loginForm() {
+    var correctUsername = "lorenz123";
+    var correctPassword = "12345";
+    var typeUsername = document.getElementById("Username").value;
+    var typePassword = document.getElementById("Password").value;
+
+    if (typeUsername == correctUsername && typePassword == correctPassword) {
+        document.getElementById("notif").innerText = "Login Successfully";
+        window.location.href = "mycalculator.html";
+    } else {
+        document.getElementById("notif").innerText = "Invalid Access";
+    }
+}
+</script>
+
+<div class="lor">
+    <h1>Login</h1>
+    <p>Username</p>
+    <input type="text" id="Username" placeholder="Enter Username">
+    <p>Password</p>
+    <input type="password" id="Password" placeholder="Enter Password">
+    <span id="notif"></span>
+    <br><br>
+    <button id="btn" onclick="loginForm()">Login</button>
+</div>
+
+</body> 
+</html>
